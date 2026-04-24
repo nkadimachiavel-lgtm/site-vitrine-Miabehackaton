@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#271900",
+                    "on-background": "#191c1e",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#61de8a",
+                    "surface-bright": "#f7f9fc",
+                    "surface": "#f7f9fc",
+                    "on-surface": "#191c1e",
+                    "tertiary": "#002b12",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#42474e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#386188",
+                    "secondary-container": "#fdbf41",
+                    "inverse-surface": "#2d3133",
+                    "inverse-on-surface": "#eff1f4",
+                    "on-secondary-container": "#6f4e00",
+                    "secondary": "#7c5800",
+                    "outline": "#72777f",
+                    "on-primary-fixed": "#001d34",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#1d496f",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#a2caf7",
+                    "tertiary-fixed": "#7efba4",
+                    "primary-fixed": "#cfe5ff",
+                    "tertiary-container": "#004420",
+                    "surface-dim": "#d8dadd",
+                    "secondary-fixed": "#ffdea7",
+                    "surface-container": "#eceef1",
+                    "surface-container-highest": "#e0e3e6",
+                    "on-tertiary-fixed-variant": "#005228",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e6e8eb",
+                    "primary-container": "#0a3d62",
+                    "primary": "#002743",
+                    "outline-variant": "#c2c7cf",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "secondary-fixed-dim": "#fabc3e",
+                    "on-tertiary-fixed": "#00210c",
+                    "background": "#f7f9fc",
+                    "surface-container-low": "#f2f4f7",
+                    "primary-fixed-dim": "#a2caf7",
+                    "on-primary-container": "#80a8d3"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "lg": "24px",
+                    "xs": "8px",
+                    "stack-gap": "16px",
+                    "sm": "12px",
+                    "base": "4px",
+                    "xl": "32px",
+                    "container-padding": "20px"
+            },
+            "fontFamily": {
+                    "h1": ["Inter"],
+                    "h2": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"],
+                    "reputation-score": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "h1": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "h3": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+                    "reputation-score": ["48px", {"lineHeight": "48px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .qr-gradient {
+            background: linear-gradient(135deg, #0a3d62 0%, #002743 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background min-h-screen flex flex-col">
+<header class="flex items-center justify-between w-full h-16 px-4 z-50 bg-[#f5f7fa] dark:bg-slate-950 border-b border-gray-200 dark:border-gray-800 shadow-sm fixed top-0 left-0">
+<div class="flex items-center gap-3">
+<button class="active:scale-95 transition-transform hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-full">
+<span class="material-symbols-outlined text-[#0a3d62] dark:text-blue-400" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-semibold text-base text-[#0a3d62] dark:text-blue-400">Mon QR Code</h1>
+</div>
+<button class="active:scale-95 transition-transform hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-full">
+<span class="material-symbols-outlined text-[#0a3d62] dark:text-blue-400" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="flex-1 w-full max-w-md mx-auto px-container-padding pt-24 pb-32 flex flex-col items-center">
+<div class="w-full mb-lg">
+<div class="bg-white rounded-xl shadow-[0_4px_20px_0_rgba(10,61,98,0.05)] p-lg flex flex-col items-center text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-md flex flex-col items-end">
+<div class="flex items-center gap-1 bg-tertiary-fixed-dim/10 text-on-tertiary-fixed-variant px-sm py-1 rounded-full border border-tertiary-fixed-dim/20">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">VÉRIFIÉ</span>
+</div>
+</div>
+<div class="mt-md mb-xl">
+<div class="p-base bg-white border border-outline-variant rounded-xl shadow-inner">
+<div class="w-64 h-64 relative bg-white p-md">
+<img alt="QR Code" class="w-full h-full object-contain" data-alt="A clean high-quality geometric QR code designed for digital payments with dark navy modules and sharp edges on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApFzdkIzIfPKBKI1aYDg708-KiY8uAopogTQ6CW505RkJW-e1cEIbfX55Cp5e6RWwT7_u8LY2Z6APyj6PVd2Gj2RGYzG-vlTFEQrGyEy4iQ1mvznCm8iAaQ_XwJNwLkvkICG6KYTZrDPtI9QJpExv5h8Y8EwfRHYm1VuM-XPrySf8MhSOM4cj8aO76GHnq95nX4mTWSYxAeNg3xOcXF6Ay4CI8KiB5NDURjbFxU3tPsJkh56hegukPgYxD7CCJoB7r5b7XZ0rxdlY"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[48px]" data-icon="security">security</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-base mb-lg">
+<h2 class="font-h2 text-h2 text-primary">Maman Pauline</h2>
+<p class="font-body-md text-on-surface-variant flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="store">store</span>
+                        Marché Total
+                    </p>
+</div>
+<div class="w-full pt-lg border-t border-surface-container flex justify-around items-center">
+<div class="flex flex-col items-center">
+<span class="font-reputation-score text-reputation-score text-tertiary-fixed-dim">98</span>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Score de Confiance</span>
+</div>
+<div class="h-12 w-[1px] bg-surface-container-highest"></div>
+<div class="flex flex-col items-center">
+<div class="flex items-baseline gap-xs">
+<span class="font-h2 text-h2 text-primary">780</span>
+<span class="font-body-md text-outline">/1000</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Points Blockchain</span>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full flex flex-col gap-md">
+<button class="w-full bg-secondary-container text-on-secondary-container py-md px-lg rounded-full font-h3 flex items-center justify-center gap-md active:scale-95 transition-all shadow-md">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+                Partager le QR Code
+            </button>
+<button class="w-full bg-primary-container text-white py-md px-lg rounded-full font-h3 flex items-center justify-center gap-md active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                Télécharger pour Impression
+            </button>
+<button class="w-full bg-transparent text-primary py-xs px-lg rounded-full font-body-lg flex items-center justify-center gap-xs hover:bg-surface-container-low transition-all">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+                Comment ça marche ?
+            </button>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center pt-3 pb-6 px-2 bg-white dark:bg-slate-900 border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_20px_0_rgba(10,61,98,0.05)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 active:scale-90 transition-all duration-150 hover:text-[#0a3d62] dark:hover:text-blue-300">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+<span class="text-[11px] font-medium font-['Inter']">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 active:scale-90 transition-all duration-150 hover:text-[#0a3d62] dark:hover:text-blue-300">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[11px] font-medium font-['Inter']">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 active:scale-90 transition-all duration-150 hover:text-[#0a3d62] dark:hover:text-blue-300">
+<span class="material-symbols-outlined" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span class="text-[11px] font-medium font-['Inter']">Payments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#0a3d62] dark:text-blue-400 font-bold active:scale-90 transition-all duration-150 hover:text-[#0a3d62] dark:hover:text-blue-300">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[11px] font-medium font-['Inter']">Account</span>
+</div>
+</nav>
+</body></html>

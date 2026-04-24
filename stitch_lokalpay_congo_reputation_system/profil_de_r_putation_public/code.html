@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#6f4e00",
+                    "on-background": "#191c1e",
+                    "secondary": "#7c5800",
+                    "secondary-fixed": "#ffdea7",
+                    "on-primary-container": "#80a8d3",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "outline": "#72777f",
+                    "surface-dim": "#d8dadd",
+                    "surface-variant": "#e0e3e6",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#cfe5ff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#002b12",
+                    "on-tertiary-fixed-variant": "#005228",
+                    "primary": "#002743",
+                    "on-tertiary-fixed": "#00210c",
+                    "primary-fixed-dim": "#a2caf7",
+                    "surface-container": "#eceef1",
+                    "tertiary-fixed": "#7efba4",
+                    "surface-tint": "#386188",
+                    "surface-container-low": "#f2f4f7",
+                    "on-secondary-fixed-variant": "#5e4200",
+                    "surface-container-high": "#e6e8eb",
+                    "tertiary-container": "#004420",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#61de8a",
+                    "primary-container": "#0a3d62",
+                    "on-tertiary-container": "#38ba6b",
+                    "on-primary-fixed": "#001d34",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#a2caf7",
+                    "surface-container-highest": "#e0e3e6",
+                    "surface-bright": "#f7f9fc",
+                    "background": "#f7f9fc",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#fdbf41",
+                    "surface": "#f7f9fc",
+                    "on-surface-variant": "#42474e",
+                    "on-surface": "#191c1e",
+                    "inverse-on-surface": "#eff1f4",
+                    "outline-variant": "#c2c7cf",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#271900",
+                    "secondary-fixed-dim": "#fabc3e",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed-variant": "#1d496f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap": "16px",
+                    "lg": "24px",
+                    "xs": "8px",
+                    "sm": "12px",
+                    "base": "4px",
+                    "container-padding": "20px",
+                    "md": "16px",
+                    "xl": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "reputation-score": ["Inter"],
+                    "h1": ["Inter"],
+                    "h3": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "reputation-score": ["48px", {"lineHeight": "48px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "h1": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h3": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "h2": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f7f9fc; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-background">
+<!-- Top Navigation Shell -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-5 py-3 bg-white/95 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="text-lg font-bold tracking-tighter text-blue-900 dark:text-white">LokalPay</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+<span class="material-symbols-outlined text-slate-500">account_circle</span>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-32">
+<!-- Banner Section -->
+<section class="relative h-48 w-full bg-primary-container overflow-hidden">
+<div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80')]" data-alt="vibrant bustling outdoor market in brazzaville with colorful stalls and merchants in soft focus and warm sunlight"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-primary-container/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-container-padding flex items-end gap-md">
+<div class="w-20 h-20 rounded-xl bg-white p-1 shadow-lg overflow-hidden shrink-0">
+<img alt="Merchant Avatar" class="w-full h-full object-cover rounded-lg" data-alt="professional smiling african merchant in a clean blue shirt against a neutral studio background with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjEU1JwGdWutK2gDtLmoqmt_NvVifO1KBCqnSL8aLZCrtklNPCyfe56cKBkmUGYhz4muX_YQHWdqRlfigvu0CaIG7eX1SKUHB-fpc8j0iacpTaPVEqXO2Zclc-8B51nZm_kzLog-_BXyHLgy-QZOIOm27AeUk6dePnpu-R4099bhvubuyNSZmWQ4klQs3wFGqPL7-jNIQ5YyPGFYsuIoTi6yrI8I16c9OHjl6C2v0I9pUux82zcYAsxF0tU4VJWv6HVRxNBokPrxI"/>
+</div>
+<div class="pb-2">
+<h1 class="font-h1 text-h1 text-white">Mamadou Diop</h1>
+<div class="flex items-center gap-xs text-white/80">
+<span class="font-body-md text-body-md">Marché Total, Bacongo</span>
+<span class="w-1 h-1 rounded-full bg-white/40"></span>
+<span class="font-body-md text-body-md">Membre depuis 2023</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Score Card -->
+<section class="px-container-padding -mt-6 relative z-10">
+<div class="bg-white rounded-xl p-lg shadow-[0_4px_20px_rgba(10,61,98,0.05)] flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant mb-base">SCORE DE RÉPUTATION</span>
+<div class="flex items-baseline gap-xs mb-sm">
+<span class="font-reputation-score text-reputation-score text-tertiary-container">780</span>
+<span class="font-h2 text-h2 text-outline">/ 1000</span>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden mb-md">
+<div class="h-full bg-on-tertiary-container rounded-full" style="width: 78%"></div>
+</div>
+<div class="flex items-center gap-xs px-3 py-1 bg-tertiary-fixed rounded-full">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container fill-icon">verified_user</span>
+<span class="font-label-caps text-label-caps text-tertiary-container">Vérifié par blockchain – Celo</span>
+</div>
+<a class="mt-sm font-body-md text-body-md text-primary-container/60 underline decoration-primary-container/20" href="#">explorer.lokalpay.cg/profil/48x3A...</a>
+</div>
+</section>
+<!-- Score Breakdown (Bento Style) -->
+<section class="px-container-padding mt-xl">
+<h2 class="font-h2 text-h2 mb-md text-primary">Analyse de Performance</h2>
+<div class="grid grid-cols-2 gap-sm">
+<!-- Large Card -->
+<div class="col-span-1 bg-white p-md rounded-xl shadow-[0_4px_20px_rgba(10,61,98,0.05)] border-l-4 border-on-tertiary-container">
+<span class="material-symbols-outlined text-on-tertiary-container mb-xs">monitoring</span>
+<p class="font-label-caps text-label-caps text-outline">Volume</p>
+<p class="font-h3 text-h3 text-primary">Élevé</p>
+</div>
+<div class="col-span-1 bg-white p-md rounded-xl shadow-[0_4px_20px_rgba(10,61,98,0.05)] border-l-4 border-on-tertiary-container">
+<span class="material-symbols-outlined text-on-tertiary-container mb-xs">event_repeat</span>
+<p class="font-label-caps text-label-caps text-outline">Régularité</p>
+<p class="font-h3 text-h3 text-primary">98%</p>
+</div>
+<div class="col-span-2 bg-white p-md rounded-xl shadow-[0_4px_20px_rgba(10,61,98,0.05)] flex items-center justify-between">
+<div>
+<p class="font-label-caps text-label-caps text-outline mb-base">Évaluations Clients</p>
+<div class="flex items-center gap-xs">
+<div class="flex text-on-secondary-container">
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined fill-icon text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+</div>
+<span class="font-h3 text-h3 text-primary">4.8</span>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-outline mb-base">Diversité</p>
+<p class="font-h3 text-h3 text-primary">Moyenne</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Transaction History -->
+<section class="px-container-padding mt-xl">
+<div class="flex justify-between items-end mb-md">
+<h2 class="font-h2 text-h2 text-primary">Activité Récente</h2>
+<span class="font-label-caps text-label-caps text-primary-container">VOIR TOUT</span>
+</div>
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(10,61,98,0.05)] overflow-hidden">
+<!-- Transaction Item 1 -->
+<div class="p-md flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg font-semibold text-primary">25,000 CFA</p>
+<p class="font-body-md text-body-md text-outline">Partner: A*** M***</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-primary uppercase">Paiement</p>
+<p class="font-body-md text-body-md text-outline">Hier</p>
+</div>
+</div>
+<!-- Transaction Item 2 -->
+<div class="p-md flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined">swap_horiz</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg font-semibold text-primary">150,000 CFA</p>
+<p class="font-body-md text-body-md text-outline">Partner: K*** S***</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-tertiary uppercase">Envoi</p>
+<p class="font-body-md text-body-md text-outline">12 Oct</p>
+</div>
+</div>
+<!-- Transaction Item 3 -->
+<div class="p-md flex items-center justify-between border-b border-surface-container">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg font-semibold text-primary">8,500 CFA</p>
+<p class="font-body-md text-body-md text-outline">Partner: J*** D***</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-primary uppercase">Paiement</p>
+<p class="font-body-md text-body-md text-outline">10 Oct</p>
+</div>
+</div>
+<!-- Anonymized rows spacer -->
+<div class="p-md text-center bg-surface-container-low">
+<p class="font-label-caps text-label-caps text-outline">+ 7 AUTRES TRANSACTIONS CE MOIS</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(10,61,98,0.05)]">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="font-inter text-[10px] uppercase font-bold tracking-wider">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span class="font-inter text-[10px] uppercase font-bold tracking-wider">Pay</span>
+</div>
+<div class="flex flex-col items-center justify-center text-blue-900 dark:text-blue-300 bg-blue-50 dark:bg-blue-900/30 rounded-xl px-3 py-1">
+<span class="material-symbols-outlined fill-icon">verified_user</span>
+<span class="font-inter text-[10px] uppercase font-bold tracking-wider">Reputation</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[10px] uppercase font-bold tracking-wider">Account</span>
+</div>
+</nav>
+</body></html>

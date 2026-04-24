@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f4",
+                        "tertiary-container": "#004420",
+                        "on-primary-fixed-variant": "#1d496f",
+                        "surface-container-highest": "#e0e3e6",
+                        "surface": "#f7f9fc",
+                        "primary-fixed": "#cfe5ff",
+                        "surface-bright": "#f7f9fc",
+                        "on-tertiary-container": "#38ba6b",
+                        "surface-variant": "#e0e3e6",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#7c5800",
+                        "outline": "#72777f",
+                        "surface-container-high": "#e6e8eb",
+                        "on-tertiary-fixed-variant": "#005228",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1e",
+                        "surface-tint": "#386188",
+                        "on-secondary-fixed": "#271900",
+                        "on-primary": "#ffffff",
+                        "primary": "#002743",
+                        "secondary-fixed-dim": "#fabc3e",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d8dadd",
+                        "primary-fixed-dim": "#a2caf7",
+                        "inverse-primary": "#a2caf7",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "inverse-surface": "#2d3133",
+                        "tertiary": "#002b12",
+                        "primary-container": "#0a3d62",
+                        "secondary-container": "#fdbf41",
+                        "tertiary-fixed": "#7efba4",
+                        "on-primary-fixed": "#001d34",
+                        "on-secondary-container": "#6f4e00",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c2c7cf",
+                        "background": "#f7f9fc",
+                        "on-primary-container": "#80a8d3",
+                        "surface-container": "#eceef1",
+                        "on-tertiary-fixed": "#00210c",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffdea7",
+                        "on-surface-variant": "#42474e",
+                        "surface-container-low": "#f2f4f7",
+                        "tertiary-fixed-dim": "#61de8a",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "8px",
+                        "sm": "12px",
+                        "stack-gap": "16px",
+                        "container-padding": "20px",
+                        "xl": "32px",
+                        "base": "4px",
+                        "md": "16px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"],
+                        "h1": ["Inter"],
+                        "reputation-score": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "h2": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h3": ["18px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}],
+                        "h1": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "reputation-score": ["48px", {"lineHeight": "48px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h2": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scanner-cutout {
+            mask: radial-gradient(circle, transparent 240px, black 240px);
+            -webkit-mask: radial-gradient(circle, transparent 140px, black 140px);
+            mask: linear-gradient(to right, black, black), linear-gradient(to right, black, black);
+            mask-clip: padding-box, content-box;
+        }
+        .qr-window {
+            background-color: transparent;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.65);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-hidden">
+<!-- Background Camera View -->
+<div class="fixed inset-0 z-0 bg-slate-900">
+<img alt="Merchant stall in Brazzaville" class="w-full h-full object-cover blur-sm opacity-80" data-alt="Blurred vibrant market stall in Brazzaville with colorful textiles and fresh produce under bright natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFKW-aupwCY5ZvO93EhqE45BM1ykMWIDvxmTG3ktaoMK02CLabzYOhFsciMHDvct0gODb5-wszlX_RMhivgztYuVPh_BCH1xEWQBMn9wirzq0yTZ_H3fH_dB_dkO2UpfcsoUkGGeFfIyxDN7N4S-Lorc0VlGGyeVS_xB-pkBMNi_wkVL35a8Vot3ubEl6TE0S4At-xBGQ0gJTg2G-IwSTHIA91Qh6UeEqJlOVWZAK3xeAEOt8blGmIfF9uWi0tTGFX_fGyYx2lGvw"/>
+</div>
+<!-- Top Navigation Overlay (Shared Component: TopAppBar) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 py-2 h-16 bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors text-blue-900 dark:text-blue-100 Active: opacity-70 transition-opacity">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-inter font-semibold text-lg tracking-tight text-blue-900 dark:text-blue-100">Scan QR Code</h1>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors text-blue-900 dark:text-blue-100 Active: opacity-70 transition-opacity">
+<span class="material-symbols-outlined">flashlight_on</span>
+</button>
+</header>
+<!-- Main Scanner UI Content -->
+<main class="relative z-10 flex flex-col items-center justify-center h-screen pb-24">
+<!-- Scanning Viewport -->
+<div class="relative w-72 h-72 qr-window rounded-3xl overflow-hidden flex items-center justify-center">
+<!-- Corner Markers -->
+<div class="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-secondary-container rounded-tl-2xl"></div>
+<div class="absolute top-0 right-0 w-12 h-12 border-t-4 border-r-4 border-secondary-container rounded-tr-2xl"></div>
+<div class="absolute bottom-0 left-0 w-12 h-12 border-b-4 border-l-4 border-secondary-container rounded-bl-2xl"></div>
+<div class="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-secondary-container rounded-br-2xl"></div>
+<!-- Scanning Line (Decorative) -->
+<div class="w-full h-0.5 bg-secondary-container/60 shadow-[0_0_15px_#fdbf41] animate-pulse"></div>
+</div>
+<div class="mt-xl text-center px-lg">
+<h2 class="font-h2 text-white mb-xs">Alignez le QR Code pour scanner</h2>
+<p class="font-body-md text-white/70">Le paiement sera instantané et sécurisé via LokalPay</p>
+</div>
+<div class="absolute bottom-32 w-full px-container-padding flex flex-col gap-md">
+<button class="w-full py-md px-lg bg-secondary-container text-primary font-h3 rounded-full shadow-lg flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined">keyboard</span>
+                Saisir le numéro manuellement
+            </button>
+<div class="flex items-center justify-center gap-md">
+<div class="flex items-center gap-xs px-md py-xs bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-white text-label-caps">VÉRIFIÉ PAR BLOCKCHAIN</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Secondary Task-Specific FAB/Actions (Contextual) -->
+<div class="fixed bottom-28 right-6 z-20">
+<button class="w-14 h-14 bg-primary-container text-on-primary-container rounded-2xl shadow-xl flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-3xl">image</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar (Shared Component: BottomNavBar) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(10,61,98,0.05)] rounded-t-xl">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-700 dark:hover:text-yellow-400 transition-all Active: scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-inter text-[11px] font-medium">Home</span>
+</a>
+<!-- Scan (Active) -->
+<a class="flex flex-col items-center justify-center bg-blue-50 dark:bg-blue-900/30 text-blue-900 dark:text-yellow-500 rounded-xl px-3 py-1.5 hover:text-blue-700 dark:hover:text-yellow-400 transition-all Active: scale-95 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<span class="font-inter text-[11px] font-medium">Scan</span>
+</a>
+<!-- Wallet -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-700 dark:hover:text-yellow-400 transition-all Active: scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-inter text-[11px] font-medium">Wallet</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-700 dark:hover:text-yellow-400 transition-all Active: scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-inter text-[11px] font-medium">History</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1.5 hover:text-blue-700 dark:hover:text-yellow-400 transition-all Active: scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[11px] font-medium">Profile</span>
+</a>
+</nav>
+</body></html>
